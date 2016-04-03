@@ -1,0 +1,61 @@
+<ion-header-bar align-title="center" class="bar-header bar-light">
+	<h1 class="title">Logo</h1>
+</ion-header-bar>
+<ion-content padding="true">
+	<div class="panel">
+		<div class="panel-heading separator">
+			<div class="panel-title"><h4 class="font-arial bold">Sign Up</h4></div>
+			<p class="hint-text">Already a member? <a ui-sref="login">Login</a></p>
+		</div>
+		<div class="panel-body">
+			<form id="form-register" class="p-t-15" role="form" action="index.html">
+				<div class="form-group form-group-default">
+					<label>First Name</label>
+					<input type="text" name="fname" class="form-control" required>
+				</div>
+				<div class="form-group form-group-default">
+					<label>Last Name</label>
+					<input type="text" name="lname" class="form-control" required>
+				</div>
+				<div class="form-group form-group-default">
+					<label>Username</label>
+					<input type="text" name="uname" class="form-control" required>
+				</div>
+				<div class="form-group form-group-default">
+					<label>Password</label>
+					<input type="password" name="pass" class="form-control" required>
+				</div>
+				<div class="form-group form-group-default">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" required>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-12">
+						<p class="small">
+							By clicking "Sign up", you confirm that you accept our
+							<a href="#" target="_blank" class="natural-text underline">Terms of Service</a> and
+							<a href="#" target="_blank" class="natural-text underline">Privacy Policy</a>.
+						</p>
+					</div>
+				</div>
+				<button class="btn btn-success btn-block btn-cons m-t-10" type="submit"><span class="bold">Sign Up</span></button>
+				<p class="p-t-15 text-center bold">OR</p>
+
+				<p class="p-t-20">
+					<button class="btn btn-block btn-complete">
+						<span class="pull-left"><i class="fa fa-facebook"></i></span>
+						<span class="bold">Sign up with Facebook</span>
+					</button>
+					<button class="btn btn-block btn-danger">
+						<span class="pull-left"><i class="fa fa-google-plus"></i></span>
+						<span class="bold">Sign up with Google</span>
+					</button>
+					<button class="btn btn-block btn-info">
+						<span class="pull-left"><i class="fa fa-linkedin"></i></span>
+						<span class="bold">Sign up with LinkedIn</span>
+					</button>
+				</p>
+			</form>
+		</div>
+	</div>
+</ion-content>

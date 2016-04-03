@@ -1,0 +1,44 @@
+<ion-header-bar align-title="center" class="bar-header bar-light">
+	<h1 class="title">Logo</h1>
+</ion-header-bar>
+<ion-content padding="true">
+	<div class="panel">
+		<div class="panel-heading separator">
+			<div class="panel-title">
+				<h4 class="font-arial bold">Log in</h4>
+			</div>
+			<p class="hint-text">Not registered with us yet? <a ui-sref="register">Sign up</a></p>
+		</div>
+		<div class="panel-body">
+			<form id="form-login" class="p-t-15" role="form" ng-submit="login()" novalidate="novalidate">
+				<div class="form-group form-group-default">
+					<label>Email</label>
+					<div class="controls">
+						<input type="text" name="username" class="form-control" required="" aria-required="true">
+					</div>
+				</div>
+				<div class="form-group form-group-default">
+					<label>Password</label>
+					<div class="controls">
+						<input type="password" class="form-control" name="password" required="" aria-required="true">
+					</div>
+				</div>
+				<button class="btn btn-success btn-block btn-cons button-block" type="submit"><span class="bold">Login</span></button>
+			</form>
+			<p class="p-t-15 text-center bold">OR</p>
+				<button class="btn btn-block btn-complete button-block">
+					<span class="pull-left"><i class="fa fa-facebook"></i></span>
+					<span class="bold">Login with Facebook</span>
+				</button>
+				<button class="btn btn-block btn-danger button-block">
+					<span class="pull-left"><i class="fa fa-google-plus"></i></span>
+					<span class="bold">Login with Google</span>
+				</button>
+				<button class="btn btn-block btn-info button-block">
+					<span class="pull-left"><i class="fa fa-linkedin"></i></span>
+					<span class="bold">Login with LinkedIn</span>
+				</button>
+			</p>
+		</div>
+	</div>
+</ion-content>

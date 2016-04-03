@@ -1,0 +1,11 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "ionic-material": "^0.4.2",
+    "Materialize": "materialize#^0.97.5"
+  }
+}

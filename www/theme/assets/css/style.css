@@ -1,0 +1,31 @@
+/*
+
+* Override Pages default styles or create your own styles here
+
+*/
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+	color: #000;
+}
+.card.share .card-footer:hover{
+	background: transparent;
+}
+.card.share .card-header:hover {
+	background: #2b303b;
+}
+.card.share .card-header {
+	border-bottom: 0px solid  transparent;
+}
+
+.q-list {
+	position: relative;
+	max-height: 350px;
+}
+.email-wrapper .email-opened {
+	margin-left: 5px;
+}
+.email-wrapper .email-list.item {
+	height: 100%;
+}
