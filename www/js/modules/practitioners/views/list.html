@@ -1,9 +1,19 @@
 <ion-view view-title="Doctors">
-  <ion-content>
-    <ion-list>
-	  	<ion-item ng-repeat="doctor in doctors track by $index" href="#/app/doctor/profile/{{doctor.id}}">
-		  {{doctor.name}}
-		</ion-item>
-    </ion-list>
-  </ion-content>
+	<ion-content>
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios-search placeholder-icon"></i>
+				<input type="search" placeholder="Search">
+			</label>
+		</div>
+		<ion-list>
+			<a class="item item-avatar item-icon-right" href="#/app/doctor/profile/{{doctor.id}}"
+				ng-repeat="doctor in doctors track by $index">
+				<img src="img/demo.jpeg">
+				<h2>{{doctor.name}}</h2>
+				<p>{{doctor.practioner}}</p>
+				<i class="icon ion-eye"></i>
+			</a>
+		</ion-list>
+	</ion-content>
 </ion-view>

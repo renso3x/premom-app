@@ -60,6 +60,15 @@
           }
         },
       })
+      .state('app.viewHospital', {
+        url: '/hospital/:hospitalId',
+        views: {
+          'pageContent': {
+            templateUrl: 'js/modules/facilities/views/view-hospital.html',
+            controller: 'FacilitiesController',
+          }
+        },
+      })
   }
 
   function appRun($ionicPlatform) {

@@ -11,15 +11,18 @@
 		$scope.doctors = [
 			{
 				'id': 1,
-				'name': 'Pul Goso'
-			},
-			{
-				'id': 2,
-				'name': 'Edward Snart'
+				'name': 'Pul Goso',
+				'practioner': 'Medical Doctor'
 			},
 			{
 				'id': 3,
-				'name': 'John Doe'
+				'name': 'Pul Goso',
+				'practioner': 'Medical Doctor'
+			},
+			{
+				'id': 3,
+				'name': 'Pul Goso',
+				'practioner': 'Medical Doctor'
 			},
 		];
 
