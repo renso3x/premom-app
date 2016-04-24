@@ -1,0 +1,20 @@
+<ion-view view-title="{{vm.state}}">
+	<ion-content>
+		<div class="im-wrapper">
+			<h4 class="border-top"><i class="icon fa {{vm.icon}}"></i> List of {{vm.state}}</h4>
+		</div>
+		<div class="list card"
+			ng-repeat="assistant in repeat(10) track by $index"
+			ng-last-repeat="mylist">
+			<div class="item item-image">
+				<img src="img/impin-bg.jpg">
+			</div>
+
+			<a class="item item-icon-left assertive">
+				<h2>{{vm.facility_name}}</h2>
+				<i class="icon ion-location"></i>
+				<p>New York</p>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

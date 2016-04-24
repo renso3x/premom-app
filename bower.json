@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ionic-material": "^0.4.2",
-    "Materialize": "materialize#^0.97.5"
+    "Materialize": "materialize#^0.97.5",
+    "font-awesome": "fontawesome#^4.6.1"
   }
 }

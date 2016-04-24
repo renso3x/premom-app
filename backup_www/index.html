@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Premom</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above-->
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <!-- THEME -->
+    <link href="theme/assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="theme/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="theme/pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <link href="theme/pages/css/pages.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- THEME -->
+  </head>
+  <body ng-app="premom">
+
+    <div class="page-container">
+      <ion-nav-view></ion-nav-view>
+    </div>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!-- Authentication Module-->
+    <script src="js/modules/authentication/authentication.module.js"></script>
+    <script src="js/modules/authentication/controllers/LoginController.js"></script>
+    <script src="js/modules/authentication/controllers/RegisterController.js"></script>
+
+    <!-- Practitioners Module -->
+    <script src="js/modules/practitioners/practitioners.module.js"></script>
+    <script src="js/modules/practitioners/controllers/DoctorController.js"></script>
+    <script src="js/modules/practitioners/controllers/NurseController.js"></script>
+    <script src="js/modules/practitioners/controllers/Profile.js"></script>
+
+    <!-- Facilities Module -->
+    <script src="js/modules/facilities/facilities.module.js"></script>
+    <script src="js/modules/facilities/controllers/FacilitiesController.js"></script>
+
+
+  </body>
+</html>

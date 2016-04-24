@@ -1,85 +1,118 @@
 (function() {
-  'use strict';
 
-  angular
-    .module('premom', [
-      'ionic',
-      'app.authentication.module',
-      'app.practitioners.module',
-      'app.facilities.module'
-    ])
-    .config(appConfig)
-    .run(appRun)
+    var app = angular.module('starter', [
+        'ionic',
+        'ionic-material',
+        'app.utils.directive',
+        'app.modules',
+    ]);
 
-  function appConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('login')
+    app.run(function ($ionicPlatform, ionicMaterialInk) {
+        ionicMaterialInk.displayEffect();
 
-    $stateProvider
-      .state('login', {
-        url: '/login',
-        templateUrl: 'js/modules/authentication/views/login.html',
-        controller: 'LoginController',
-        contollerAs: 'vm'
-      })
-      .state('register', {
-        url: '/register',
-        templateUrl: 'js/modules/authentication/views/register.html',
-        controller: 'RegisterController',
-        contollerAs: 'vm'
-      })
-      .state('app', {
-        abstract : true,
-        url:'/app',
-        templateUrl: 'js/modules/templates/scaff.html',
-      })
-      .state('app.doctor', {
-        url: '/doctor',
-        views: {
-          'pageContent': {
-            templateUrl: 'js/modules/practitioners/views/list.html',
-            controller: 'DoctorController',
-            controllerAs: 'vm',
-          }
-        }
-      })
-      .state('app.profile', {
-        url: '/doctor/profile/:doctorId',
-        views: {
-          'pageContent': {
-            templateUrl: 'js/modules/practitioners/views/profile.html',
-            controller: 'ProfileController',
-          }
-        },
-      })
-      .state('app.hospital', {
-        url: '/hospital',
-        views: {
-          'pageContent': {
-            templateUrl: 'js/modules/facilities/views/hospitals.html',
-            controller: 'FacilitiesController',
-          }
-        },
-      })
-      .state('app.viewHospital', {
-        url: '/hospital/:hospitalId',
-        views: {
-          'pageContent': {
-            templateUrl: 'js/modules/facilities/views/view-hospital.html',
-            controller: 'FacilitiesController',
-          }
-        },
-      })
-  }
+        $ionicPlatform.ready(function () {
+            if (window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            }
+            if (window.StatusBar) {
+                StatusBar.styleDefault();
+            }
+        });
+    })
 
-  function appRun($ionicPlatform) {
-    $ionicPlatform.ready(function() {
-      if(window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
-      }
-      if(window.StatusBar) {
-        StatusBar.styleDefault();
-      }
+    app.config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('app', {
+                url: '/app',
+                abstract: true,
+                templateUrl: 'templates/menu.html'
+            })
+            .state('app.login', {
+                url: '/login',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/login.html',
+                        controller: function(ionicMaterialInk) {
+                            ionicMaterialInk.displayEffect();
+                        }
+                    }
+                }
+            })
+            .state('app.register', {
+                url: '/register',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/register.html',
+                        controller: function(ionicMaterialInk) {
+                            ionicMaterialInk.displayEffect();
+                        }
+                    }
+                }
+            })
+            .state('app.dashboard', {
+                url: '/dashboard',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/dashboard.html',
+                        controller: function(ionicMaterialInk) {
+                            ionicMaterialInk.displayEffect();
+                        }
+                    }
+                }
+            })
+            .state('app.doctor', {
+                url: '/doctors',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/doctor/doctors.html',
+                        controller: 'DoctorCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.nurse', {
+                url: '/nurse',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/nurse-midwife/nurse-midwife.html',
+                        controller: 'NurseCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.midwife', {
+                url: '/midwife',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/nurse-midwife/nurse-midwife.html',
+                        controller: 'MidwifeCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.hospital', {
+                url: '/hospital',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/facilities/facility.html',
+                        controller: 'HospitalCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.healthcenter', {
+                url: '/healthcenter',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/facilities/facility.html',
+                        controller: 'HealthCenterCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+
+        // if none of the above states are matched, use this as the fallback
+        $urlRouterProvider.otherwise('/app/dashboard');
     });
-  }
-})();
+
+})()
