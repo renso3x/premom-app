@@ -1,0 +1,16 @@
+<ion-view view-title="{{vm.state}}">
+	<ion-content>
+		<div class="im-wrapper">
+			<h4>{{vm.state}} clinical follow up. </h4>
+			<p>(Check those you have already taken.)</p>
+			<div class="list">
+				<div class="item item-checkbox" ng-repeat="checklist in repeat(20) track by $index">
+                    <label class="checkbox">
+                        <input type="checkbox" value="$index">
+                    </label>
+                    {{vm.state}} Procedure {{$index+1}}
+                </div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

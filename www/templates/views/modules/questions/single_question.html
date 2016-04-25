@@ -1,0 +1,35 @@
+<ion-view view-title="Questions">
+	<ion-content>
+        <div class="im-wrapper">
+            <div class="list card">
+                <div class="item item-avatar">
+                    <img src="img/arya.jpg">
+                    <h2>Arya Stark</h2>
+                    <p>April 25, 2016</p>
+                </div>
+                <div class="item item-body">
+                    The quickest way to a man's heart is through Arya's needle. She has two speeds: Walk and Kill, and is the reason why Waldo is still hiding.
+                    <p>
+                        <i class="icon ion-chatbubbles"></i>
+                        <a class="subdued">5 Comments</a>
+                    </p>
+                </div>
+                <div class="item">
+                    <label class="item item-input">
+                        <textarea placeholder="Comment here.." rows="5" ng-model="comment"></textarea>
+                    </label>
+                    <button ng-click="submitComment(comment)" class="button button-block button-positive ink icon-left ion-paper-airplane">
+                        Comment
+                    </button>
+                </div>
+                <div class="list" ng-repeat="comment in repeat(5) track by $index">
+                    <div class="item item-avatar item-text-wrap">
+                        <img src="img/avatar2x.jpg">
+                        <h2>Venkman</h2>
+                        <p>The quickest way to a man's heart is through Arya's needle. She has two speeds: Walk and Kill, and is the reason why Waldo is still hiding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Inbox">
+	<ion-content>
+		<div class="im-wrapper">
+			<div class="list inbox-list ink-dark" ng-repeat="reply in repeat(10) track by $index">
+				<a class="item item-avatar">
+					<img src="img/avatar2x.jpg">
+					<h2>John Doe</h2>
+					<p>Hey men! How are you?</p>
+				</a>
+				<a class="item item-avatar">
+					<img src="img/jon-snow.jpg">
+					<h2>John Snow</h2>
+					<p>I'm good men..</p>
+				</a>
+			</div>
+		</div>
+	</ion-content>
+	<div class="bar bar-footer bar-balanced" ui-sref="app.compose({email: 'johndoe@gmail.com'})">
+		<div class="title">Reply</div>
+	</div>
+</ion-view>

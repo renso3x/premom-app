@@ -7,7 +7,9 @@
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
             <ion-nav-buttons side="right">
-                <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+                <button class="button button-icon button-clear ion-chatbox" id="menu-popover" ui-sref="app.inbox"></button>
+                <button class="button button-icon button-clear ion-gear-b" id="menu-popover" ui-sref="app.profile"></button>
+                <button class="button button-icon button-clear fa fa-sign-out" id="menu-popover" ng-click="logout()"></button>
             </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="menuContent"></ion-nav-view>
@@ -29,6 +31,9 @@
                     <i class="icon fa fa-user-plus"></i>
                     Register
                 </ion-item>
+                <div class="item item-divider">
+                    Menus
+                </div>
                 <ion-item nav-clear menu-close href="#/app/dashboard">
                     Dashboard
                 </ion-item>
@@ -62,17 +67,8 @@
                 <ion-item nav-clear menu-close href="#/app/postnatal">
                     Postnatal
                 </ion-item>
-                <div class="item item-divider">
+                <ion-item nav-clear menu-close href="#/app/guides">
                     Guides
-                </div>
-                <ion-item nav-clear menu-close href="#/app/breastfeeding">
-                    Breastfeeding
-                </ion-item>
-                <ion-item nav-clear menu-close href="#/app/delivery">
-                    Delivery
-                </ion-item>
-                <ion-item nav-clear menu-close href="#/app/pregnancy">
-                    Pregnancy
                 </ion-item>
             </ion-list>
         </ion-content>

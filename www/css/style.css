@@ -230,3 +230,10 @@ p {
 .item-content i {
     font-size: 60px;
 }
+.menu.menu-left  i {
+    font-size: 20px;
+    font-weight: normal;
+}
+.inbox-list:last-child {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,16 @@
+<ion-view view-title="Inbox">
+	<ion-content>
+		<div class="im-wrapper">
+			<div class="list ink-dark"
+				ng-repeat="message in repeat(10) track by $index"
+				ng-last-repeat="mylist"
+				ui-sref="app.view-message({id: $index})">
+				<a class="item item-avatar">
+					<img src="img/avatar2x.jpg">
+					<h2>John Doe</h2>
+					<p>Hey men! How are you?</p>
+				</a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

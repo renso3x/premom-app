@@ -4,7 +4,8 @@
 			<h4 class="border-top"><i class="icon fa fa-user-md"></i> List of doctors</h4>
 			<div class="list ink-dark"
 				ng-repeat="doctors in repeat(10) track by $index"
-				ng-last-repeat="mylist">
+				ng-last-repeat="mylist"
+				ui-sref="app.doctor-profile({id: $index})">
 				<a class="item item-avatar">
 					<img src="img/avatar2x.jpg">
 					<h2>John Doe</h2>

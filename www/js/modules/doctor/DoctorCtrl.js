@@ -7,7 +7,6 @@
 	DoctorCtrl.$inject = ['$scope', 'ionicMaterialInk'];
 	function DoctorCtrl($scope, ionicMaterialInk) {
 		var vm = this;
-
 		DoctorCtrlInit();
 		$scope.repeat = repeat;
 

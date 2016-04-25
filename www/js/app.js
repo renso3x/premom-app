@@ -6,7 +6,6 @@
         'app.utils.directive',
         'app.modules',
     ]);
-
     app.run(function ($ionicPlatform, ionicMaterialInk) {
         ionicMaterialInk.displayEffect();
 
@@ -20,12 +19,15 @@
         });
     })
 
-    app.config(function ($stateProvider, $urlRouterProvider) {
+    app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+        $ionicConfigProvider.tabs.position('bottom');
+
         $stateProvider
             .state('app', {
                 url: '/app',
                 abstract: true,
-                templateUrl: 'templates/menu.html'
+                templateUrl: 'templates/menu.html',
+                controller: 'DashboardCtrl'
             })
             .state('app.login', {
                 url: '/login',
@@ -70,6 +72,16 @@
                     }
                 }
             })
+            .state('app.doctor-profile', {
+                url: '/doctor/:id',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/doctor/viewDoctor.html',
+                        controller: 'DoctorCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
             .state('app.nurse', {
                 url: '/nurse',
                 views: {
@@ -106,6 +118,106 @@
                     'menuContent': {
                         templateUrl: 'templates/views/modules/facilities/facility.html',
                         controller: 'HealthCenterCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.questions', {
+                url: '/questions',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/questions/questions.html',
+                        controller: 'QuestionCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.single_question', {
+                url: '/question/:id',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/questions/single_question.html',
+                        controller: 'QuestionCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.videos', {
+                url: '/videos',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/videos/videos.html',
+                        controller: 'VideoCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.postnatal', {
+                url: '/postnatal',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/checklist/checklist.html',
+                        controller: 'PostnatalCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.prenatal', {
+                url: '/prenatal',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/checklist/checklist.html',
+                        controller: 'PrenatalCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.guides', {
+                url: '/guides',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/guides/guide.html',
+                        controller: 'GuideCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.compose', {
+                url: '/compose/:email',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/message/compose.html',
+                        controller: 'ComposeCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.profile', {
+                url: '/profile',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/profile/user-profile.html',
+                        controller: 'ProfileCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.inbox', {
+                url: '/inbox',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/message/inbox.html',
+                        controller: 'InboxCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.view-message', {
+                url: '/:id',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/message/view-message.html',
+                        controller: 'InboxCtrl',
                         controllerAs: 'vm'
                     }
                 }

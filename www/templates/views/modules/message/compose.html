@@ -1,0 +1,22 @@
+<ion-view view-title="Compose Message">
+    <ion-content>
+        <div class="im-wrapper">
+            <div class="list">
+                <form ng-submit="send()">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="Email" ng-model="message.to">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Message</span>
+                        <textarea rows="10" ng-model="message.msg" placeholder="Message"></textarea>
+                    </label>
+                    <br/>
+                    <button type="submit" class="button button-block button-positive icon-left ion-ios-paperplane">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
