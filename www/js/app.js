@@ -5,6 +5,7 @@
         'ionic-material',
         'app.utils.directive',
         'app.modules',
+        'app.services'
     ]);
     app.run(function ($ionicPlatform, ionicMaterialInk) {
         ionicMaterialInk.displayEffect();
@@ -20,6 +21,7 @@
     })
 
     app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
         $ionicConfigProvider.tabs.position('bottom');
 
         $stateProvider
@@ -82,11 +84,31 @@
                     }
                 }
             })
+            .state('app.doctor-hospital', {
+                url: '/doctor/hospital/:lat/:lng',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/shared/maps.html',
+                        controller: 'MapsCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
             .state('app.nurse', {
                 url: '/nurse',
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/views/modules/nurse-midwife/nurse-midwife.html',
+                        controller: 'NurseCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.nurse-profile', {
+                url: '/nurse/:id',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/nurse-midwife/viewNurseMidwife.html',
                         controller: 'NurseCtrl',
                         controllerAs: 'vm'
                     }
@@ -98,6 +120,26 @@
                     'menuContent': {
                         templateUrl: 'templates/views/modules/nurse-midwife/nurse-midwife.html',
                         controller: 'MidwifeCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.midwife-profile', {
+                url: '/midwife/:id',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/modules/nurse-midwife/viewNurseMidwife.html',
+                        controller: 'MidwifeCtrl',
+                        controllerAs: 'vm'
+                    }
+                }
+            })
+            .state('app.nurse-midwife-hospital', {
+                url: '/nurse-midwife/hospital/:lat/:lng',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/views/shared/maps.html',
+                        controller: 'MapsCtrl',
                         controllerAs: 'vm'
                     }
                 }

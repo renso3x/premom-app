@@ -2,6 +2,7 @@
 
 	angular
 		.module('app.modules', [
+        	'uiGmapgoogle-maps',
 			'app.dashboard.ctrl',
 			'app.login.ctrl',
 			'app.register.ctrl',
@@ -16,6 +17,7 @@
 			'app.guide.ctrl',
 			'app.compose.ctrl',
 			'app.profile.ctrl',
-			'app.inbox.ctrl'
+			'app.inbox.ctrl',
+			'app.maps.ctrl'
 		])
 })();

@@ -1,0 +1,51 @@
+<ion-view view-title="{{vm.state}}">
+	<ion-content>
+		<div class="im-wrapper">
+			<div class="list card">
+				<img ng-src="img/{{vm.image}}" class="i-avatar">
+				<div class="item item-divider">
+					<i class="icon ion-person"></i>
+					{{vm.state}}'s Information
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-person"></i>
+					<p>John Doe</p>
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-at"></i>
+					<p>johndoe@gmail.com</p>
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-location"></i>
+					<p>211 1st St S Ste A, Alabaster, AL 35007</p>
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-ios-telephone"></i>
+					<p>(123) 456-7890</p>
+				</div>
+				<div class="item item-divider">
+					<i class="icon fa fa-hospital-o"></i>
+					Work Information
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon fa fa-hospital-o"></i>
+					<p>St. Joseph Hospital</p>
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-location"></i>
+					<p>211 1st St S Ste A, Alabaster, AL 35007</p>
+				</div>
+				<div class="item item-icon-left">
+					<i class="icon ion-ios-telephone"></i>
+					<p>(123) 456-7890</p>
+				</div>
+				<div class="item">
+					<button class="button button-block button-assertive icon-left ion-location"
+					ng-click="viewHospital(40.1451, -99.6680)">
+						View Location
+					</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

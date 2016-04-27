@@ -4,7 +4,8 @@
 			<h4 class="border-top"><i class="icon fa {{vm.icon}}"></i> List of {{vm.state}}</h4>
 			<div class="list ink-dark"
 				ng-repeat="assistant in repeat(10) track by $index"
-				ng-last-repeat="mylist">
+				ng-last-repeat="mylist"
+				ng-click="viewNurseMidwife($index)">
 				<a class="item item-avatar">
 					<img ng-src="img/{{vm.image}}">
 					<h2>{{vm.name}}</h2>

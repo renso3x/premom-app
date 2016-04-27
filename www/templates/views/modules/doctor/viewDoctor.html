@@ -2,7 +2,7 @@
 	<ion-content>
 		<div class="im-wrapper">
 			<div class="list card">
-				<img src="img/avatar2x.jpg">
+				<img src="img/avatar2x.jpg" class="i-avatar">
 				<div class="item item-divider">
 					<i class="icon ion-person"></i>
 					Doctor's Information
@@ -61,7 +61,12 @@
 					<i class="icon ion-ios-telephone"></i>
 					<p>(123) 456-7890</p>
 				</div>
-
+				<div class="item">
+					<button class="button button-block button-assertive icon-left ion-location"
+					ui-sref="app.doctor-hospital({lat: '40.1451', lng:'-99.6680'})">
+						View Location
+					</button>
+				</div>
 			</div>
 		</div>
 	</ion-content>
